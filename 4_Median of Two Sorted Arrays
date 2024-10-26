@@ -1,0 +1,27 @@
+// In leet code 4ms runned it a record without chat gpt use own code
+
+/**
+ * 
+ * Find the median of the 2 sorted array
+ * 
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+var findMedianSortedArrays = function(nums1, nums2) {
+    const d = [...nums1, ...nums2]
+    if((d.length % 2) !== 0 ){
+        return d.at(Math.round(d.length / 2)-1)
+    }else{
+        const sumOfMedian = (d[Math.round(d.length/2)-1 ] + d[Math.round(d.length/2)])
+        if(sumOfMedian === 0) return 0;
+        return (sumOfMedian)/2
+    } 
+};
+
+
+const a = [1,2,3,4,5];
+const b = [6,7,8,9,10,11,12,13,14,15,16,17];
+console.time()
+findMedianSortedArrays(a,b)
+console.timeEnd()
