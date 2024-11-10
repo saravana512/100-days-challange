@@ -1,3 +1,5 @@
+'use strict';
+
 // call
 
 // Function borrowing 
@@ -41,7 +43,7 @@ display.apply(name4, [35, '677777']);
 
 const displayName = display.bind(name4, 34, '677777');
 console.log(displayName);
-console.log(displayName());
+console.log(displayName);
 
 
 
@@ -50,7 +52,7 @@ console.log(displayName());
  * call, apply used for function borrowing
  * invoke function directly
  * call -> pass the arguement as directly
- * apply -> pass the arrguement as arryt of list
+ * apply -> pass the arrguement as array of list
  * 
  * bind -> copy of the function -> when ever call it will invoked 
  * 
