@@ -1,0 +1,38 @@
+Array Mastery: A Curated List of Must-Try Coding Challenges
+
+Arrays are one of the most fundamental data structures in programming, and mastering them is essential for building a strong foundation in coding. Whether you're a beginner or an experienced programmer, these questions will help you sharpen your skills and prepare for coding interviews.
+
+🔹 𝐄𝐚𝐬𝐲:
+📌 Find the Maximum and Minimum Element in an Array: https://lnkd.in/gmrT7ntG
+📌 Rotate Array: https://lnkd.in/gCTnkyvH
+📌 Remove Duplicates from Sorted Array: https://lnkd.in/guzvxEAp
+📌 Merge Sorted Array: https://lnkd.in/gP4n5Kp4
+📌 Contains Duplicate: https://lnkd.in/giXRAjZH
+
+🔸 𝐌𝐞𝐝𝐢𝐮𝐦:
+📌 Best Time to Buy and Sell Stock: https://lnkd.in/gCKfWmwj
+📌 Product of Array Except Self: https://lnkd.in/gbrxZgXU
+📌 Maximum Subarray: https://lnkd.in/gBWZKSHR
+📌 3Sum: https://lnkd.in/gyezweV5
+📌 Subarray Sum Equals K: https://lnkd.in/g2qXwTsr
+
+🔴 𝐇𝐚𝐫𝐝:
+📌 Trapping Rain Water: https://lnkd.in/g5vYW-aY
+📌 Median of Two Sorted Arrays: https://lnkd.in/g_qbHvy6
+📌 Sliding Window Maximum: https://lnkd.in/geD9SHPy
+📌 Longest Consecutive Sequence: https://lnkd.in/gyMhRVET
+📌 Count of Smaller Numbers After Self: https://lnkd.in/gVvdtCkA
+
+To help you discover job openings, I have created a dedicated Job Posting Community. It's a great place to stay updated on the latest job opportunities!
+
+Join Here : https://lnkd.in/gwnTTJeX
+
+
+const mapval = new Set();
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] > 0) mapval.add(nums[i]);
+    }
+
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] > 0) mapval.has(nums[i]);
+    }
