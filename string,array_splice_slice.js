@@ -12,7 +12,7 @@ slice()
 slice(start)
 slice(start, end)
 
-// slice  affect the original string
+// splice  affect the original string
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
