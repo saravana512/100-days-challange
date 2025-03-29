@@ -18,7 +18,7 @@ function leftsidePramide(n) {
   }
 }
 
-leftsidePramide(10);
+leftsidePramide(5);
 
 // 1
 // 12
@@ -53,3 +53,19 @@ for (let i = 1; i <= 5; i++) {
 // * * *
 // * *
 // *
+
+for (let i = 5; i > 0; i--) {
+  let str = "";
+  for (let j = i; j > 0; j--) {
+    str += "* ";
+  }
+  console.log(str);
+}
+
+for (let i = 5; i > 0; i--) {
+  let str = "";
+  for (let j = i; j > 0; j--) {
+    str += `${i - j + 1} `;
+  }
+  console.log(str);
+}
