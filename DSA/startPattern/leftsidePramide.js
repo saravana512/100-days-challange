@@ -69,3 +69,34 @@ for (let i = 5; i > 0; i--) {
   }
   console.log(str);
 }
+
+//    *
+//   * *
+//  * * *
+// * * * *
+// 4 space and 1 start
+// 3 space and 1 star space and 1 star
+
+const pramid = (n) => {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+
+    // Space
+    for (let j = n - i - 1; j > 0; j--) {
+      str += " ";
+    }
+
+    // Star
+    for (let k = 2 * i + 1; k > 0; k--) {
+      str += "*";
+    }
+
+    for (let l = n - i - 1; l > 0; l--) {
+      str += " ";
+    }
+
+    console.log(str);
+  }
+};
+
+pramid(4);
