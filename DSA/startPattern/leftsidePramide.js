@@ -77,6 +77,8 @@ for (let i = 5; i > 0; i--) {
 // 4 space and 1 start
 // 3 space and 1 star space and 1 star
 
+console.log("------------------------");
+
 const pramid = (n) => {
   for (let i = 0; i < n; i++) {
     let str = "";
@@ -91,6 +93,7 @@ const pramid = (n) => {
       str += "*";
     }
 
+    // Space
     for (let l = n - i - 1; l > 0; l--) {
       str += " ";
     }
@@ -99,4 +102,60 @@ const pramid = (n) => {
   }
 };
 
-pramid(4);
+pramid(10);
+console.log("------------------------");
+
+const pramid2 = (n) => {
+  for (let i = n - 1; i >= 0; i--) {
+    let str = "";
+
+    // Space
+    for (let j = n - i - 1; j > 0; j--) {
+      str += " ";
+    }
+
+    // Star
+    for (let k = 2 * i + 1; k > 0; k--) {
+      str += "*";
+    }
+
+    // Space
+    for (let l = n - i - 1; l > 0; l--) {
+      str += " ";
+    }
+
+    console.log(str);
+  }
+};
+
+pramid2(10);
+
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+
+const halfDiamond = (n) => {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    for (let j = 0; j <= i; j++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+
+  for (let i = n - 1; i > 0; i--) {
+    let str = "";
+    for (let j = i; j > 0; j--) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+
+halfDiamond(5);
