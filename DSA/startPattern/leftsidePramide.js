@@ -130,6 +130,8 @@ const pramid2 = (n) => {
 
 pramid2(10);
 
+console.log("---------------------");
+
 // *
 // **
 // ***
@@ -159,3 +161,36 @@ const halfDiamond = (n) => {
 };
 
 halfDiamond(5);
+
+console.log("-------------------------");
+
+// 1
+// 01
+// 101
+// 0101
+// 10101
+
+const binaryPramid = (n) => {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    if (i === 0) {
+      str = "1";
+      console.log(str);
+      continue;
+    } else if (i % 2 === 0) {
+      const arr = ["1", "0"];
+      for (let j = 0; j <= i; j++) {
+        str += arr[j % 2];
+        // console.log(str, "ch");
+      }
+    } else {
+      const arr = ["0", "1"];
+      for (let j = 0; j <= i; j++) {
+        str += arr[j % 2];
+      }
+    }
+    console.log(str);
+  }
+};
+
+binaryPramid(10);
