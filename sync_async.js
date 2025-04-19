@@ -17,9 +17,6 @@ async function asynchronus() {
       res(console.log("async"));
     }, 1000);
   });
-  setTimeout(() => {
-    console.log("Value logged");
-  }, 5000);
   console.log(3);
 }
 

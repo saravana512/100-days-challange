@@ -2,7 +2,7 @@
 
 // // call
 
-// // Function borrowing 
+// // Function borrowing
 
 // // 1) Method 1
 // const name = {
@@ -22,7 +22,7 @@
 
 // name.display.call(name1)
 
-// //  Method 2 
+// //  Method 2
 // const name3 = {
 //     firstname: 'saro4',
 //     lastname: 'kum4'
@@ -45,53 +45,52 @@
 // console.log(displayName);
 // console.log(displayName);
 
-
-
-
 // /**
 //  * call, apply used for function borrowing
 //  * invoke function directly
 //  * call -> pass the arguement as directly
 //  * apply -> pass the arrguement as array of list
-//  * 
-//  * bind -> copy of the function -> when ever call it will invoked 
-//  * 
+//  *
+//  * bind -> copy of the function -> when ever call it will invoked
+//  *
 //  */
 
 const display = function (place, check, val1) {
-    console.log(this.firstname, this.lastname, place, check, val1)
-    return `${this.firstname}, ${this.lastname}, ${place}, ${check}`
-}
+  //   console.log(this.firstname, this.lastname, place, check, val1);
+  return `${this.firstname}, ${this.lastname}, ${place}, ${check}`;
+};
 
-display.call({firstname: 'demo', lastname: '1'}, 'trichy', 'test');
-display.call({firstname: 'call', lastname: '1'}, 'checnnai');
-display.apply({firstname: 'demo', lastname: '1'}, ['trichy', 'test']);
+display.call({ firstname: "demo", lastname: "1" }, "trichy", "test");
+display.call({ firstname: "call", lastname: "1" }, "checnnai");
+display.apply({ firstname: "demo", lastname: "1" }, ["trichy", "test"]);
 
-const disName = display.bind({firstname: 'demo', lastname: '1'}, 'trichy', 'test');
-console.log(disName('val1'))
-
+const disName = display.bind(
+  { firstname: "demo", lastname: "1" },
+  "trichy",
+  "test"
+);
+console.log(disName("val1"));
 
 /**
- * Funtion borrowing 
- * call -> first arguement as refference in that function we dont declare any argument name 
- *         and then second and third ... arguements are we declare in params that will access directly we can pass n number of arguements 
- * 
- * apply -> first arguement as refference in that function we dont declare any argument name 
- *         and then second arguement as array of values or objects thats the only difference 
- * 
- * bind -> catching the value, copy of the function, 
- *         when ever we call the function it will invoked 
+ * Funtion borrowing
+ * call -> first arguement as refference in that function we dont declare any argument name
+ *         and then second and third ... arguements are we declare in params that will access directly we can pass n number of arguements
+ *
+ * apply -> first arguement as refference in that function we dont declare any argument name
+ *         and then second arguement as array of values or objects thats the only difference
+ *
+ * bind -> catching the value, copy of the function,
+ *         when ever we call the function it will invoked
  */
 
-
 // Pollyfill
-Function.prototype.myBind = function (...args) {
-    const obj = this;
-    const params = args.slice(1);
-    return function (...ards2) {
-        obj.apply(args[0], [...params, ...ards2])
-    }
-}
+// Function.prototype.myBind = function (...args) {
+//     const obj = this;
+//     const params = args.slice(1);
+//     return function (...ards2) {
+//         obj.apply(args[0], [...params, ...ards2])
+//     }
+// }
 
-const n = display.myBind({firstname: 'demo', lastname: '1'}, 'trichy', 'test');
-console.log(n('Ch'));
+// const n = display.myBind({firstname: 'demo', lastname: '1'}, 'trichy', 'test');
+// console.log(n('Ch'));
