@@ -1,4 +1,5 @@
 {
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorBlinking": "expand"
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "prettier.tabWidth": 4
 }
